@@ -16,7 +16,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -25,113 +25,47 @@
         .header {
             text-align: center;
             color: white;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            max-width: 800px;
         }
 
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .header p {
-            font-size: 1.1em;
-            opacity: 0.9;
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 300;
+            line-height: 1.6;
         }
 
-        .container {
-            max-width: 500px;
-            width: 100%;
-        }
-
-        .form-section {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-
-        .form-section h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            color: #555;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 14px;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        .button-group {
+        .main-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+            align-items: start;
         }
 
-        button {
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            font-size: 14px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .btn-secondary {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-        }
-
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        button:active {
-            transform: translateY(0);
+        .preview-section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
 
         .card-preview {
             perspective: 1000px;
-            height: 300px;
-            margin-bottom: 30px;
+            height: 350px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
         .business-card {
@@ -139,9 +73,9 @@
             height: 100%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 15px;
-            padding: 30px;
+            padding: 35px;
             color: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -151,6 +85,10 @@
             transition: transform 0.6s;
         }
 
+        .business-card:hover {
+            transform: rotateY(5deg) rotateX(2deg);
+        }
+
         .business-card::before {
             content: '';
             position: absolute;
@@ -158,7 +96,7 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
             animation: shine 3s infinite;
         }
 
@@ -173,23 +111,26 @@
         }
 
         .card-name {
-            font-size: 1.8em;
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 8px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.5px;
         }
 
         .card-title {
-            font-size: 0.9em;
-            opacity: 0.9;
-            margin-bottom: 20px;
+            font-size: 1em;
+            opacity: 0.95;
+            margin-bottom: 25px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
 
         .card-divider {
             height: 2px;
             background: rgba(255, 255, 255, 0.3);
-            margin: 15px 0;
+            margin: 20px 0;
         }
 
         .card-footer {
@@ -198,47 +139,138 @@
         }
 
         .card-info {
-            font-size: 0.85em;
-            line-height: 1.6;
-            opacity: 0.95;
+            font-size: 0.9em;
+            line-height: 1.8;
+            opacity: 0.98;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .card-info p {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .card-info i {
-            width: 16px;
+            width: 18px;
             text-align: center;
+            font-size: 1.1em;
+        }
+
+        .form-section {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+        }
+
+        .form-section h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.6em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            color: #555;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 13px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.3s;
+            background: #f9f9f9;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 13px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(-1px);
         }
 
         .color-picker-group {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            margin-top: 10px;
+            gap: 12px;
+            margin-top: 15px;
         }
 
         .color-option {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             cursor: pointer;
             border: 3px solid transparent;
-            transition: transform 0.2s, border-color 0.2s;
+            transition: all 0.3s;
         }
 
         .color-option:hover {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
 
         .color-option.active {
             border-color: white;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            transform: scale(1.05);
         }
 
         .color-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
@@ -249,37 +281,41 @@
 
         .export-section {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             text-align: center;
         }
 
         .export-section h3 {
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
         }
 
         .export-buttons {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 12px;
         }
 
         .export-btn {
-            padding: 10px;
-            background: #f5f5f5;
-            border: 2px solid #ddd;
-            border-radius: 5px;
+            padding: 13px 20px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
+            color: #333;
         }
 
         .export-btn:hover {
-            background: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-color: #667eea;
+            transform: translateY(-3px);
         }
 
         .toast {
@@ -288,9 +324,9 @@
             right: 20px;
             background: #333;
             color: white;
-            padding: 15px 20px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
             display: none;
             z-index: 1000;
         }
@@ -311,18 +347,110 @@
             }
         }
 
+        @media (max-width: 1024px) {
+            .main-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .card-preview {
+                height: 300px;
+            }
+        }
+
         @media (max-width: 768px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            .header {
+                margin-bottom: 40px;
+            }
+
             .header h1 {
                 font-size: 1.8em;
             }
 
-            .form-group input,
-            .form-group textarea {
-                font-size: 16px;
+            .header p {
+                font-size: 1em;
+            }
+
+            .form-section {
+                padding: 25px;
+            }
+
+            .form-section h2 {
+                font-size: 1.3em;
             }
 
             .color-picker-group {
                 grid-template-columns: repeat(4, 1fr);
+            }
+
+            .card-name {
+                font-size: 1.6em;
+            }
+
+            .card-title {
+                font-size: 0.95em;
+            }
+
+            button {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+
+            .header p {
+                font-size: 0.95em;
+            }
+
+            .card-preview {
+                height: 280px;
+                padding: 15px;
+            }
+
+            .business-card {
+                padding: 25px;
+            }
+
+            .form-section {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .form-section h2 {
+                font-size: 1.1em;
+            }
+
+            .color-picker-group {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .export-section {
+                padding: 20px;
+            }
+
+            .card-name {
+                font-size: 1.4em;
+            }
+
+            .card-info {
+                font-size: 0.85em;
             }
         }
     </style>
@@ -333,38 +461,41 @@
         <p>Crie seu cartão de visita personalizado em tempo real</p>
     </div>
 
-    <div class="container">
-        <!-- Prévia do Cartão -->
-        <div class="card-preview">
-            <div class="business-card" id="businessCard">
-                <div class="card-header">
-                    <div class="card-name" id="previewName">Seu Nome</div>
-                    <div class="card-title" id="previewTitle">Sua Profissão</div>
-                </div>
-                <div class="card-divider"></div>
-                <div class="card-footer">
-                    <div class="card-info">
-                        <p><i class="fas fa-envelope"></i> <span id="previewEmail">seu@email.com</span></p>
-                        <p><i class="fas fa-phone"></i> <span id="previewPhone">(XX) XXXXX-XXXX</span></p>
-                        <p><i class="fas fa-map-marker-alt"></i> <span id="previewLocation">Sua Cidade</span></p>
+    <div class="main-wrapper">
+        <!-- Sección de Preview -->
+        <div class="preview-section">
+            <!-- Prévia do Cartão -->
+            <div class="card-preview">
+                <div class="business-card" id="businessCard">
+                    <div class="card-header">
+                        <div class="card-name" id="previewName">Seu Nome</div>
+                        <div class="card-title" id="previewTitle">Sua Profissão</div>
+                    </div>
+                    <div class="card-divider"></div>
+                    <div class="card-footer">
+                        <div class="card-info">
+                            <p><i class="fas fa-envelope"></i> <span id="previewEmail">seu@email.com</span></p>
+                            <p><i class="fas fa-phone"></i> <span id="previewPhone">(XX) XXXXX-XXXX</span></p>
+                            <p><i class="fas fa-map-marker-alt"></i> <span id="previewLocation">Sua Cidade</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Seleção de Cores -->
-        <div class="form-section">
-            <h2>🎨 Escolha uma Cor</h2>
-            <div class="color-picker-group">
-                <div class="color-option color-1 active" onclick="changeCardColor('linear-gradient(135deg, #667eea 0%, #764ba2 100%)'); this.parentElement.querySelectorAll('.color-option').forEach(el => el.classList.remove('active')); this.classList.add('active');"></div>
-                <div class="color-option color-2" onclick="changeCardColor('linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'); this.parentElement.querySelectorAll('.color-option').forEach(el => el.classList.remove('active')); this.classList.add('active');"></div>
-                <div class="color-option color-3" onclick="changeCardColor('linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'); this.parentElement.querySelectorAll('.color-option').forEach(el => el.classList.remove('active')); this.classList.add('active');"></div>
-                <div class="color-option color-4" onclick="changeCardColor('linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'); this.parentElement.querySelectorAll('.color-option').forEach(el => el.classList.remove('active')); this.classList.add('active');"></div>
-                <div class="color-option color-5" onclick="changeCardColor('linear-gradient(135deg, #fa709a 0%, #fee140 100%)'); this.parentElement.querySelectorAll('.color-option').forEach(el => el.classList.remove('active')); this.classList.add('active');"></div>
+            <!-- Seleção de Cores -->
+            <div class="form-section">
+                <h2>🎨 Escolha uma Cor</h2>
+                <div class="color-picker-group">
+                    <div class="color-option color-1 active" onclick="changeCardColor('linear-gradient(135deg, #667eea 0%, #764ba2 100%)'); this.parentElement.querySelectorAll('.color-option').forEach(el => el.classList.remove('active')); this.classList.add('active');"></div>
+                    <div class="color-option color-2" onclick="changeCardColor('linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'); this.parentElement.querySelectorAll('.color-option').forEach(el => el.classList.remove('active')); this.classList.add('active');"></div>
+                    <div class="color-option color-3" onclick="changeCardColor('linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'); this.parentElement.querySelectorAll('.color-option').forEach(el => el.classList.remove('active')); this.classList.add('active');"></div>
+                    <div class="color-option color-4" onclick="changeCardColor('linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'); this.parentElement.querySelectorAll('.color-option').forEach(el => el.classList.remove('active')); this.classList.add('active');"></div>
+                    <div class="color-option color-5" onclick="changeCardColor('linear-gradient(135deg, #fa709a 0%, #fee140 100%)'); this.parentElement.querySelectorAll('.color-option').forEach(el => el.classList.remove('active')); this.classList.add('active');"></div>
+                </div>
             </div>
         </div>
 
-        <!-- Formulário de Edição -->
+        <!-- Sección de Formulario -->
         <div class="form-section">
             <h2>📝 Seus Dados</h2>
 
@@ -402,18 +533,18 @@
                 <button class="btn-primary" onclick="preencherExemplo()">📋 Exemplo</button>
                 <button class="btn-secondary" onclick="limparFormulario()">🗑️ Limpar</button>
             </div>
-        </div>
 
-        <!-- Exportar Cartão -->
-        <div class="export-section">
-            <h3>💾 Exportar Cartão</h3>
-            <div class="export-buttons">
-                <button class="export-btn" onclick="exportarPNG()">
-                    <i class="fas fa-image"></i> PNG
-                </button>
-                <button class="export-btn" onclick="exportarJSON()">
-                    <i class="fas fa-code"></i> JSON
-                </button>
+            <!-- Exportar Cartão -->
+            <div class="export-section" style="margin-top: 30px;">
+                <h3>💾 Exportar Cartão</h3>
+                <div class="export-buttons">
+                    <button class="export-btn" onclick="exportarPNG()">
+                        <i class="fas fa-image"></i> PNG
+                    </button>
+                    <button class="export-btn" onclick="exportarJSON()">
+                        <i class="fas fa-code"></i> JSON
+                    </button>
+                </div>
             </div>
         </div>
     </div>
