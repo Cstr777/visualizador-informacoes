@@ -21,12 +21,12 @@ function changeCardColor(gradient) {
 
 // Preencher com exemplo
 function preencherExemplo() {
-    document.getElementById('name').value = 'João Silva';
+    document.getElementById('name').value = 'Vanessa Estevão';
     document.getElementById('title').value = 'Designer Gráfico';
-    document.getElementById('email').value = 'joao.silva@example.com';
-    document.getElementById('phone').value = '(11) 98765-4321';
+    document.getElementById('email').value = 'vanessa.estevão@example.com';
+    document.getElementById('phone').value = '(11) 98176-0444';
     document.getElementById('location').value = 'São Paulo, SP';
-    document.getElementById('company').value = 'Silva Design Studio';
+    document.getElementById('company').value = 'Vanessa Design Studio';
     updateCard();
     showToast('📋 Dados de exemplo carregados!');
 }
