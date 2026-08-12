@@ -97,8 +97,20 @@ function showToast(message, duration = 2000) {
     }, duration);
 }
 
+// Carregar dados padrão ao inicializar
+function carregarDadosPadroes() {
+    // EDITE AQUI COM SEUS DADOS
+    document.getElementById('name').value = 'Vanessa Estevão';
+    document.getElementById('title').value = 'Designer Gráfico';
+    document.getElementById('email').value = 'vanessa.estevao@example.com';
+    document.getElementById('phone').value = '(11) 98176-0444';
+    document.getElementById('location').value = 'São Paulo, SP';
+    document.getElementById('company').value = 'Vanessa Design Studio';
+    updateCard();
+}
+
 // Inicializar
 window.addEventListener('load', () => {
     console.log('Cartão de Visita Digital iniciado!');
-    updateCard();
+    carregarDadosPadroes();
 });
